@@ -106,8 +106,8 @@ yum -y install gcc net-tools bsdtar zip make >/dev/null
 
 install_3proxy
 
-echo "Working Folder = /home/proxy-installer"
-WORKDIR="/home/proxy-installer"
+echo "Working Folder = /home/ktoan"
+WORKDIR="/home/ktoan"
 WORKDATA="${WORKDIR}/data.txt"
 mkdir $WORKDIR && cd $_
 
@@ -117,7 +117,7 @@ IP6=$(curl -6 -s icanhazip.com | cut -f1-4 -d':')
 echo "Internal ip = ${IP4}. Exteranl sub for ip6 = ${IP6}"
 
 FIRST_PORT=20001
-LAST_PORT=24000
+LAST_PORT=28000
 
 gen_data >$WORKDIR/data.txt
 gen_iptables >$WORKDIR/boot_iptables.sh
